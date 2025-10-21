@@ -27,13 +27,7 @@ body {
 #input1 {
     background-color: #eee;
     border: none;
-    height: 25px;
-}
-
-#input2 {
-    background-color: #eee;
-    border: none;
-    height: 25px;
+    height: 40px;
 }
 
 .buttons {
