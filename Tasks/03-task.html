@@ -20,6 +20,9 @@
     <span id="input1Error" class="error">Введите значение</span> <br />
     
     Операнд 2: <input id="input2" type="text"> <br />
+    <span id="input1Error" class="error">Введите значение</span> <br />
+
+    Операнд 2: <input id="input2" type="text"> <br />
     <span id="input2Error" class="error">Введите значение</span> <br />
 
     <button id="add-btn">+</button>
@@ -40,12 +43,13 @@
         input2 сделайте, в случае ошибки, #input2Error видимым.
         */
         let input1 = document.querySelector("#input1");
-        let input3 = document.querySelector("#input2");
+        let input2 = document.querySelector("#input2");
 
         let addBtn = document.querySelector("#add-btn");
         let remBtn = document.querySelector("#rem-btn");
         let mulBtn = document.querySelector("#mul-btn");
         let divBtn = document.querySelector("#div-btn");
+        let resBtn = document.querySelector("#reset-btn");
 
         addBtn.addEventListener("click", function () {
             alert(Number(input1.value) + Number(input2.value));
@@ -61,6 +65,19 @@
 
         divBtn.addEventListener("click", function () {
             alert(input1.value / input2.value);
+        });
+
+
+        let ressButton = document.getElementById("reset-btn").addEventListener("click", function () {
+            input1.classList.add("border");
+            input2.classList.add("border");
+            input1.value = "0";
+            input2.value = "0";
+
+            let span1 = document.getElementById("input1Error")
+            span1.style.display = "block";
+            let span2 = document.getElementById("input2Error")
+            span2.style.display = "block";
         });
     </script>
 </body>

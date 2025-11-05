@@ -9,14 +9,22 @@
 </head>
 
 <body>
+      <h2>Расчёт объёма цилиндра</h2>
+      <label>Радиус: <input type="number" id="radius" /></label><br><br>
+      <label>Высота: <input type="number" id="height" /></label><br><br>
+      <button id="calcBtn">Вычислить объём</button>
+      <div class="volume-list"></div>
     <script>
-        /*
-        Задание:
-        Напишите сценарий, который вычисляет объем цилиндра по параметрам, которые вводит пользователь.
-        Для расчета используйте формулу - V=π * r в квадрате * h
-        Разместите на странице два поля ввода - первое для радиуса цилиндра, второе для высоты цилиндра.
-        Объем цилиндра выведите в тело страницы.
-        */
+        /* Задание: Напишите сценарий, который вычисляет объем цилиндра по параметрам, которые вводит пользователь. Для расчета используйте формулу - V=π * r в квадрате * h Разместите на странице два поля ввода - первое для радиуса цилиндра, второе для высоты цилиндра. Объем цилиндра выведите в тело страницы. */
+        let radius = document.getElementById("radius")
+        let volume = document.getElementById("height")
+        let res = document.getElementById("res")
+
+        let button = document.getElementById("button").addEventListener("click", function () {
+            let v = 3.14* radius.value * radius.value * height.value;
+            res.value = v;
+        })
+
     </script>
 </body>
 
